@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conifer Archive</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, p, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+		
+		header img {
+    height: 70px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 1rem; /* Add spacing between the logo and the title */
+}
+
+.header-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffccff;
+    font-family: 'Lucida Handwriting', cursive;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center; /* Vertically align text with the logo */
+}
+
+
+        body {
+            background: linear-gradient( #ffffff);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: black;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffccff;
+            font-family: 'Lucida Handwriting', cursive;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            background: #ffffff;
+            color: #333;
+            font-family: 'Bodoni MT';
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a:hover {
+            background: #ffccff;
+        }
+
+ .hero {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: url('photo/bumi.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            position: absolute;
+            font-size: 3rem;
+            color: #333;
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            text-align: center;
+            color: #333;
+        }
+
+        .container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .archive-section {
+            text-align: center;
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .archive-section h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .card-content p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-actions {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .btn {
+            background: black;
+            color: pink;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin: 0 0.5rem;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #004999;
+        }
+
+       .footer{
+background:#000;
+padding:30px 0px;
+font-family: 'Play', sans-serif;
+text-align:center;
+}
+
+.footer .row{
+width:100%;
+margin:1% 0%;
+padding:0.6% 0%;
+color:gray;
+font-size:0.8em;
+}
+
+.footer .row a{
+text-decoration:none;
+color:gray;
+transition:0.5s;
+}
+
+.footer .row a:hover{
+color:#fff;
+}
+
+.footer .row ul{
+width:100%;
+}
+
+.footer .row ul li{
+display:inline-block;
+margin:0px 30px;
+}
+
+.footer .row a i{
+font-size:2em;
+margin:0% 1%;
+}
+
+@media (max-width:720px){
+.footer{
+text-align:left;
+padding:5%;
+}
+.footer .row ul li{
+display:block;
+margin:10px 0px;
+text-align:left;
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="photo/logo.png" alt="Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="news.html">News</a>
+            <a href="archive.html">Archive</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+    </header>
+	
+	 <!-- Hero Section -->
+    <div class="hero">
+    </div>
+	
+    <!-- Archive Section -->
+    <div class="archive-section">
+        <div class="card-container">
+            <div class="card">
+                <img src="photo/news1.jpeg" alt="What is a Content Designer?">
+                <div class="card-content">
+                    <h3>What is a Content Designer?</h3>
+                    <p>Most people I speak with don’t understand what content designers 
+					actually are, and it’s no surprise. “Content” has become synonymous with the 
+					digital marketing industry,
+					and “design” has become a ubiquitous term for visual work. </p>
+                </div>
+                <div class="card-actions">
+                    <a class="btn" href="https://webbcontent.com/user-experience/what-is-a-content-designer/" target="_blank">Browse</a>
+          
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="photo/gambar2.png" alt="Content Designer Career Guide">
+                <div class="card-content">
+                    <h3>Content Designer Career Guide</h3>
+                    <p>A content designer creates content for digital products so users find them easier to use.Content designers collaborate with UX writers, 
+					product developers, graphic designers, 
+					and managers to ensure the digital product has the necessary content.</p>
+                </div>
+                <div class="card-actions">
+                    <a class="btn" href="https://technicalwriterhq.com/career/content-designer/" target="_blank">Browse</a>
+                   
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="photo/gambar3.png" alt="Content Designer Role">
+                <div class="card-content">
+                    <h3>Content Designer Role and Functions</h3>
+                    <p>Content designers make things easier for people to understand and use. 
+					This can involve working on a single piece of content or on the end-to-end journey of
+					a service to help users complete their goal and government deliver a policy intent.</p>
+                </div>
+                <div class="card-actions">
+                    <a class="btn" href="https://ddat-capability-framework.service.gov.uk/role/content-designer" target="_blank">Browse</a>
+                    
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="photo/gambar4.jpg" alt="Content Designer Job Description">
+                <div class="card-content">
+                    <h3>Content Designer Job Description</h3>
+                    <p>Nearly every business needs a strong content marketing strategy, and a content designer is key to 
+					making that strategy shine.What does a content designer do? A content designer improves the user 
+					experience and accessibility of your content, from optimizing UX to copywriting.</p>
+                </div>
+                <div class="card-actions">
+                    <a class="btn" href="https://www.testgorilla.com/blog/content-designer-job-description/" target="_blank">Browse</a>
+                    
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="photo/gambar5.jpg" alt="Content Design Skills">
+                <div class="card-content">
+                    <h3>Content Design Skills and Strategy</h3>
+                    <p>Nearly every business needs a strong content marketing strategy, 
+					and a content designer is key to making that strategy shine.What does a content designer do? 
+					A content designer improves the user experience and accessibility of your content, from optimizing 
+					UX to copywriting.</p>
+                </div>
+                <div class="card-actions">
+                    <a class="btn" href="https://technicalwriterhq.com/career/content-designer/content-designer-skills/" target="_blank">Browse</a>
+                    
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="photo/gambar6.jpg" alt="Getting Your First Job as a Content Designer">
+                <div class="card-content">
+                    <h3>Getting Your First Job as a Content Designer</h3>
+                    <p>Most content designers told me that they’d moved sideways from a different role. 
+					Many started out in journalism, marketing, communications, publishing or editorial jobs. lot of the
+					skills you gain in these professions are great building blocks for a content designer position.</p>
+                </div>
+                <div class="card-actions">
+                    <a class="btn" href="https://contentdesign.london/blog/how-to-get-your-first-job-as-a-content-designer" target="_blank">Browse</a>
+                    
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="photo/gambar7.jpg" alt="Content Design Definition">
+                <div class="card-content">
+                    <h3>Content Design Definition</h3>
+                    <p>This intends to offer flexibility, while also providing a baseline of the fundamentals needed for 
+					a content designer to work effectively.”A content designer is a designer who is part of a user-centred,
+					multi-disciplinary team on a project, product, service or programme.They are responsible for conveying 
+					information to users.</p>
+                </div>
+                <div class="card-actions">
+                    <a class="btn" href="https://cakeconsultancy.com/2020/07/20/content-designer-definition/" target="_blank">Browse</a>
+                    
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="photo/gambar8.jpg" alt="Content Creator vs. Graphic Designer">
+                <div class="card-content">
+                    <h3>Content Creator vs. Graphic Designer</h3>
+                    <p>The differences between content creators and graphic designers can be seen in a few details. 
+					Each job has different responsibilities and duties. While it typically takes 2-4 years to become a 
+					content creator, becoming a graphic designer takes usually requires 6-12 months. </p>
+                </div>
+                <div class="card-actions">
+                    <a class="btn" href="https://www.zippia.com/content-creator-jobs/content-creator-vs-graphic-designer-differences/" target="_blank">Browse</a>
+                    
+                </div>
+				
+			</div>
+				
+				<div class="card">
+                <img src="photo/gambar9.jpg" alt="What is Graphic Design">
+                <div class="card-content">
+                    <h3> What is Graphic Design Community ?</h3>
+					<p>Graphic design is everywhere—it's the logos we see, the websites we browse, the advertisements we 
+					interact with, and even the product packaging we admire. At its core, graphic design is the craft of 
+					combining visuals like images, colors, and typography to communicate messages effectively and aesthetically.</p>
+                </div>
+                <div class="card-actions">
+                    <a class="btn" href="https://www.geeksforgeeks.org/what-is-graphic-design/" target="_blank">Browse</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Footer -->
+   <!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+</head>
+<body>
+<footer>
+<div class="footer">
+<div class="row">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-youtube"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+</div>
+
+<div class="row">
+<ul>
+						    <li><a href="index.html">Home</a></li>
+							<li><a href="aboutus.html">About Us</a></li>
+							<li><a href="news.html">News</a></li>
+							<li><a href="archive.html">Archive</a></li>
+                            <li><a href="contactus.html">Contact Us</a></li>
+</ul>
+</div>
+
+<div class="row">
+Copyright © 2025 GraphiConDZ (Graphic Content Designer) - All rights reserved || Designed By : Ecah & Yana 
+</div>
+</div>
+</footer>
+</body>
+</html>
